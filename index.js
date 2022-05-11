@@ -2,12 +2,14 @@ let password = document.getElementsByClassName("rng");
 
 function generatepwd(passwordLength) {
   if (passwordLength >= 1 && passwordLength <= 18) {
-    let chars =
-      "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const chars = [];
+    for (let i = 33; i < 127; i++) {
+      chars.push(String.fromCharCode(i));
+    }
     let password = "";
     for (let i = 0; i < passwordLength; i++) {
       let randomNumber = Math.floor(Math.random() * chars.length);
-      password += chars.substring(randomNumber, randomNumber + 1);
+      password += chars[randomNumber];
     }
     return password;
   } else return "Input a number";
@@ -27,4 +29,5 @@ function readinput() {
 function copy(clicked_id) {
   let copyText = document.getElementById(clicked_id);
   navigator.clipboard.writeText(copyText.textContent);
+  console.log("feil");
 }
