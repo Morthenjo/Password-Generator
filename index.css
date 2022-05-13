@@ -112,3 +112,12 @@ button:hover {
   color: white;
   text-align: center;
 }
+
+.rng:active {
+  color: white;
+}
+
+.underline {
+  padding-left: 5rem;
+  font-size: 1.5rem;
+}

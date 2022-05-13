@@ -18,14 +18,15 @@
       </header>
       <div class="flex">
       <button id="generate-btn" onclick="render()"><img class="icon" src="Icon.png"><a class="button">Generate passwords</a></button>
-      <input type="number" class="number" id="number" oninput="readinput()" min="4" max="18">
+      <input type="number" class="number" id="number" oninput="readinput()" min="4" max="18" value="8">
     </div>
       <p class="line"></p>
+      <p class="underline">||--Click the password to copy--||</p>
       <div class="container">
-      <p class="rng" id="password" onclick="copy(this.id)">password 1</p>
-      <p class="rng" id="password2" onclick="copy(this.id)">password 2</p>
-      <p class="rng" id="password3" onclick="copy(this.id)">password 3</p>
-      <p class="rng" id="password4" onclick="copy(this.id)">password 4</p>
+      <p class="rng" id="password" onclick="copy(this.id), alert('Copied to clipboard')">password 1</p>
+      <p class="rng" id="password2" onclick="copy(this.id), alert('Copied to clipboard')">password 2</p>
+      <p class="rng" id="password3" onclick="copy(this.id), alert('Copied to clipboard')">password 3</p>
+      <p class="rng" id="password4" onclick="copy(this.id), alert('Copied to clipboard')">password 4</p>
     </div>
   </body>
   <script src="index.js"></script>
